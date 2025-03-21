@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHEIN | LOGIN</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            height: 80px;
+
+            background-color: black;
+            color: white;
+
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin-top: 50px;
+
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+        }
+        input, button{
+            width: 400px;
+            height: 40px;
+
+        }
+        input{
+            padding-left: 20px;
+            font-size: 15px;
+        }
+        .login-button{
+            background-color: black;
+            color: white;
+
+            border: none;
+            border-radius: 3px;
+
+            width: 420px;
+
+            font-size: 20px;
+
+            cursor: pointer;
+        }
+        .sign-button{
+            background-color: rgba(255, 255, 255, 0);
+
+            border: none;
+            border-radius: 3px;
+
+            width: 420px;
+
+            font-size: 15px;
+
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SHEIN</h1>
+    </header>
+    <main>
+        <h1>Login</h1><br><br>
+
+    <label>Email</label>
+    <input type="email" id = "campoEmail"><br><br>
+
+    <label>Senha</label>
+    <input type="password" id = "campoSenha"><br><br>
+
+    <button onClick="login2()" class="login-button">Login</button><br>
+    <a href="cadastro.php"><button class="sign-button">Não tenho cadastro</button></a>
+    </main>
+
+    <script>
+        let pessoa = ['igor@gmail.com','1234']
+        var adm = ["junin@gmail.com", "oloko"]
+
+        
+        function login2(){
+
+            var email = document.getElementById('campoEmail').value
+            var senha = document.getElementById('campoSenha').value
+
+        for (i = 0;i < pessoa.length; i++){
+            if(email == pessoa[0]){
+                if(senha == pessoa[1]){
+                    window.location.href = "home.php"
+                }else{
+                    alert("senha errada")
+                }
+            }else{
+                if(email == adm[0]){
+                    if(senha == adm[1]){
+                        window.location.href = "adm.php"
+                    }else{
+                        alert("senha errada")
+                    }
+                }else{
+                    alert("email errado")
+                }
+            }
+        }
+        }
+        
+    </script>
+</body>
+</html>
